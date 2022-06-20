@@ -5,6 +5,11 @@ Logs/
 
 Temp/
 
+obj/
+
 UserSettings/
 
+.idea/
+
 *.sln
+*.csproj
