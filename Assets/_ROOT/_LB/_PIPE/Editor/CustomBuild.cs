@@ -34,7 +34,7 @@ namespace LB
             var projectId            = manifest.GetValue<string>("projectId").ToString();
             var bundleId             = manifest.GetValue<string>("bundleId").ToString();
             var unityVersion         = manifest.GetValue<string>("unityVersion").ToString();
-            var xcodeVersion         = manifest.GetValue<string>("xcodeVersion").ToString();
+          //var xcodeVersion         = manifest.GetValue<string>("xcodeVersion").ToString();
             var cloudBuildTargetName = manifest.GetValue<string>("cloudBuildTargetName").ToString().ToLower();
         
             // example :
