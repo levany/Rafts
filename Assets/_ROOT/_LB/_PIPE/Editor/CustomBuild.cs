@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -37,6 +38,7 @@ public class CustomBuild
         // example :
         //if (cloudBuildTargetName.Contains("windows") && cloudBuildTargetName.Contains("64"))
         
+        Debug.Log($"LB - .");
         Debug.Log($"LB - PRE EXPORT");
         Debug.Log($"LB - target name : {cloudBuildTargetName}");
     }
@@ -45,6 +47,7 @@ public class CustomBuild
     
     public static void PostExport(string exportPath)
     {
+        Debug.Log($"LB - .");
         Debug.Log($"LB - POST EXPORT - export path : {exportPath}");
     }
 }
@@ -57,7 +60,7 @@ public class MyBuildPostprocessor
     public static void OnPostprocessBuild(BuildTarget target, string pathToBuiltProject) 
     {
         
-        Debug.Log($"LB - POST.");
+        Debug.Log($"LB - .");
         Debug.Log($"LB - POST PROCCESS BUILD (1)");
         Debug.Log($"LB - target : {target.ToString()} ");
         Debug.Log($"LB - pathToBuildProject : {pathToBuiltProject} ");
@@ -79,9 +82,10 @@ public class MyBuildPostprocessor
       
       public void OnPreprocessBuild(BuildReport report)
       {
+            Debug.Log($"LB - ====================================== ({DateTime.Now.ToShortTimeString()})");
             Debug.Log($"LB - .");
             Debug.Log($"LB - PRE PROCCESS BUILD WITH REPORT (0)");
-            Debug.Log($"LB - Files (count)             : {report.files.Length}");
+          //Debug.Log($"LB - Files (count)             : {report.files.Length}");
             Debug.Log($"LB - Steps (count)             : {report.steps.Length}");
             Debug.Log($"LB - summary.result            : {report.summary.result}");
             Debug.Log($"LB - summary.path              : {report.summary.outputPath}");
