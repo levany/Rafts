@@ -56,6 +56,8 @@ public class MyBuildPostprocessor
     [PostProcessBuild(1)]
     public static void OnPostprocessBuild(BuildTarget target, string pathToBuiltProject) 
     {
+        
+        Debug.Log($"LB - POST.");
         Debug.Log($"LB - POST PROCCESS BUILD (1)");
         Debug.Log($"LB - target : {target.ToString()} ");
         Debug.Log($"LB - pathToBuildProject : {pathToBuiltProject} ");
@@ -69,22 +71,24 @@ public class MyBuildPostprocessor
 
       public void OnPreprocessBuild(BuildTarget target, string path) 
       {
-            Debug.Log($"LB - OnPreprocessBuild");
+            Debug.Log($"LB - .");
+            Debug.Log($"LB - PRE PROCESS BUILD (0)");
             Debug.Log($"LB - target : {target}");
             Debug.Log($"LB - path : {path}");
       }
       
       public void OnPreprocessBuild(BuildReport report)
       {
-            Debug.Log($"LB - OnPreprocessBuildWithReport");
+            Debug.Log($"LB - .");
+            Debug.Log($"LB - PRE PROCCESS BUILD WITH REPORT (0)");
             Debug.Log($"LB - Files (count)             : {report.files.Length}");
             Debug.Log($"LB - Steps (count)             : {report.steps.Length}");
             Debug.Log($"LB - summary.result            : {report.summary.result}");
             Debug.Log($"LB - summary.path              : {report.summary.outputPath}");
             Debug.Log($"LB - summary.GUID              : {report.summary.guid}");
             Debug.Log($"LB - packedAssets (count)      : {report.packedAssets.Length}");
-            Debug.Log($"LB - strippingInfo             : {report.strippingInfo.name}");
-            Debug.Log($"LB - scenesUsingAssets (count) : {report.scenesUsingAssets.Length}");
+            Debug.Log($"LB - strippingInfo             : {report.strippingInfo?.name}");
+            Debug.Log($"LB - scenesUsingAssets (count) : {report.scenesUsingAssets?.Length}");
       }
  }
 
