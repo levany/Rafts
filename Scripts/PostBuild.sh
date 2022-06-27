@@ -13,6 +13,6 @@ echo "LB - Fastlane version : "
 fastlane -v
 
 echo "LB - Upload to google play store :"
-#fastlane supply --aab ../bin/Rafts.aab --track internal --release_status draft
+fastlane supply --aab ../bin/Rafts.aab --track internal --release_status draft
 
 echo "LB - ."

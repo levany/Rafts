@@ -43,6 +43,12 @@ namespace LB
             Debug.Log($"LB - .");
             Debug.Log($"LB - PRE EXPORT");
             Debug.Log($"LB - target name : {cloudBuildTargetName}");
+            
+            
+            //// Update version number to math cloud build number
+            string versionString         = $"{Application.version}.{buildNumber}";
+            PlayerSettings.bundleVersion = versionString;
+            Debug.LogFormat($"LB - PlayerSettings.bundleVersion set to {versionString}");
         }
         
         #endif
