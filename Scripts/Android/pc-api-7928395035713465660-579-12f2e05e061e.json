@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pc-api-7928395035713465660-579",
+  "private_key_id": "12f2e05e061e65abc3e042929125b8db68348435",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFY+ZfESE0P+o2\nx0glVU8kMLMbsUUVjldzi2HF/6BT70HTUO063pXJEH97LCpyX8yU74rZwKs61iKv\nE9HnZJLAQ6btvynyoZEKQdaZP5KT95lMbXKSxzlKlWV5SkRt7jY/KxnD7ZNWBN3w\nbU5GJFDQeIFqZHWzs1+AKJ2XHAFTTdnBCj8Qy+61zqMOZmZpFZ/RJhPpJdroDViJ\nLI0WTp73YuFbZigA3idpGBSPNpqXnWwU+SZIW90ntN1yvXAXHc3vSaD8CHfsRbVN\n9aPgWzDrfn7NRQBtUIzsqdoSBTMvw5vxAfiDPMcYlhmcoYcr3aFwqlgXBYXvqzdd\ntjp7RdphAgMBAAECggEAG3wpGES02Gcr8Du4doZV8kabsffxlCpRUAPw9dZ91yIi\nCtAicEeNGMWk0pxYPrvLK1PdhCuZTCSECNfcKvmsm3vwEvvC1gecQA7h2E3rVZIs\n9ODqiriV6CY8TnLCa4I3aH1SZZ8/nEMqOi+mLgshe53D+3IIl6Ca5CgDpYZfQt9+\nHxcrzJSsVJt/TruucSASbRcPCJyUJDgTS6VnFNoNwqh7JMrwJF1CJBpgqexYxyCe\n2HoLhCbW/Zsw/fE9uf+1A+xX3HpDS8JL4kDydJ+mxIZVB8tItuw4vtwlBiv31pPL\n2TxWRpYTCtGLpAip0rM0yby13Sd7Ar7l7evufTw8SQKBgQDjN64P1vDmmPyXeGKX\n0NpRQ5oElpVRm3LqUhFohwB1TbNJrEqI5aIXcA6VnEllufpvJ0oBUMnu5uMDdSqB\ndhy583IOB2dLzzObe0vbxXF1Cy0QHGy5dMOcJ4JDF+N8sm9i7AA0HIdKX7EVdRQF\nvQiyFiwyizSWdjM+leoQ8nigDQKBgQDeZPeBImr5tqCW+eYX/MYu3LpUigXR5Iia\nLroAhKtaPsEPrJSv6nPqkVLcmKaiBY8u43nQu005aM32oQ/SDMlkVrJPs/MGKCnG\nGLeJMZdRBDWdtFtQUiPyS/e4WgEAog+bRnMvqjzBo1jkL4LnzZhIvy0Kt444XVHb\nRgNU26L6pQKBgQCtx8ws+SvOcnveLYjarDYNqTKHB9S0UbwWUyZVV8uV7BOP6WIo\nSdkrK907uAi68P8FPHtxfiSzv4so/dfApGFcJ0G4URlD9fl2lVpzgBNCfYW9qL/P\nJ+rj56PNRNwMZzyh3/ZX5OnkjEOYMa9apDWeXy72iVlzKnwPBgG7bHetkQKBgQCY\nlOVK7/Y9RZOAggvfwUmntUER53B+xTEDt7Ndz6hQzmVe/6Uz3MOS2Anl18Xbu7y1\nCtT05Mzi6okFARP9pVA3S1QjYu8F9mBSzXp+4ktTBnRSsv9DaFfJUV2wWe/+IzJZ\n8kftF/t/TzcZt480wtYMcz3P8IffHAehTbPTcK2tEQKBgFtzL7nMaEf6qkgf2V5I\n34Sqig3S5DtRfcXFiZkW9Wm3o8KKbZE664lS1qjplmMAWqPJnWk7J221+T9achfg\nt1uZSYr9N7OUHPEcidsvozwfdi8OBws+3G9OPYokBmrs8OD69SWtAVl6i3SCKZ7j\nSE/Y6Tt1NoPx6clrjHzt3RPI\n-----END PRIVATE KEY-----\n",
+  "client_email": "levan-serviceaccount@pc-api-7928395035713465660-579.iam.gserviceaccount.com",
+  "client_id": "108986957827486658906",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/levan-serviceaccount%40pc-api-7928395035713465660-579.iam.gserviceaccount.com"
+}
