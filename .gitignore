@@ -17,3 +17,4 @@ Packages/packages-lock.json
 bin/Rafts.apk
 bin/Rafts.aab
 Scripts/fastlane/report.xml
+Packages/packages-lock.json
