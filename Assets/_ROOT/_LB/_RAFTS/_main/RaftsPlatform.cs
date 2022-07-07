@@ -187,6 +187,6 @@ public class RaftsPlatform : MonoBehaviour
     
     public void Log(object message)
     {
-        Debug.Log(message.ToString());
+        Debug.Log("Rafts.Platform : " + message.ToString());
     }
 }
