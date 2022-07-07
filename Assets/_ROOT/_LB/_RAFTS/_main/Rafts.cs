@@ -11,7 +11,7 @@ namespace RAFTS
     {
         public List<Step> MenuSteps = new List<Step>();
     
-        private void Start()
+        private void Start_()
         {
             var components = this.transform.GetComponentsInChildren<MonoBehaviour>(includeInactive:true);
 
