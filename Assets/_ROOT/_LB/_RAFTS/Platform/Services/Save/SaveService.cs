@@ -16,8 +16,8 @@ public class SaveService : MonoBehaviour
         // Cloud Save needs to be initialized along with the other Unity Services that
         // it depends on (namely, Authentication), and then the user must sign in.
         await UnityServices.InitializeAsync();
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
-
+        await AuthService.SignIn();
+        
         Debug.Log("SaveService.Awake : Signed in?");
 
         await DoThings();
@@ -30,12 +30,12 @@ public class SaveService : MonoBehaviour
         
         var keys = await GetAllKeys();
         
-        Debug.Log($"Keys ({keys.Count}) :" 
+        Debug.Log($"SaveService.GetAllKeys() Keys ({keys.Count}) :" 
         + "\n" +  $"Keys: {String.Join(", ", keys)}");
     
         // One Value Example
 
-        await ForceSaveSingleData("myKey", "myValue");
+        //await ForceSaveSingleData("myKey", "myValue");
         var values = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>() {"myKey"});
         var value = values.First().Value;
         Debug.Log($"SaveService.DoThings() Value : {value}");

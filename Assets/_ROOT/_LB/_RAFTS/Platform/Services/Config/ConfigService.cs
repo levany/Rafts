@@ -30,10 +30,7 @@ public class ConfigService : MonoBehaviour
         // await UnityServices.InitializeAsync(options);
 
         // remote config requires authentication for managing environment information
-        if (!AuthenticationService.Instance.IsSignedIn)
-        {
-            await AuthenticationService.Instance.SignInAnonymouslyAsync();
-        }
+        await AuthService.SignIn();
         
         Debug.Log("ConfigService.InitializeRemoteConfigAsync done");
     }
