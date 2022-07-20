@@ -19,13 +19,13 @@ public class RaftsSliceGenerator : MonoBehaviour
     }
 
     
-    [MenuItem("Rafts/Prop")]
+    [MenuItem("Rafts/Slices/Prop")]
     public static void GenerateProp()
     {
         PrefabUtility.InstantiatePrefab(instance.PropPrefab);
     }
 
-    [MenuItem("Rafts/Slice")]
+    [MenuItem("Rafts/Slices/Slice")]
     public static void GenerateSlice()
     {
         //// Prefab 

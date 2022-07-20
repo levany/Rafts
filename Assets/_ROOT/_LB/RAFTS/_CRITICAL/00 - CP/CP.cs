@@ -15,7 +15,7 @@ namespace LB.Rafts
     {
         public CStep ___LBFWR => new CStep(); ////////////////////////////////////////////////////////////////////////// LBFWR
     
-        public CStep LBFWR_Report
+        public CStep LBFWR
             =>
                 new CStep()
                 .NOTE
@@ -24,6 +24,7 @@ namespace LB.Rafts
                     ,"[ ]       ID"
                     ,"[ ]       Link"
                     ,"[ ]       Extra"
+                    ,"[ ]       Init"
                     ,"[ ] Tree"
                     ,"[ ]       Root"
                     ,"[ ]       Home"
@@ -169,6 +170,48 @@ namespace LB.Rafts
                     ,"[ ]               OnClick()"
                     ,"[ ]               Transaction"
                 )
+                .TASK("Run Platform", async s =>
+                {   
+                    /// Run platform
+                    ///
+                    ///     Simulate the following :
+                    /// 
+                    ///     - open remote
+                    ///     - click bank
+                    ///     - add slice "BTN1"
+                    ///     - Print
+                    ///         - Create Product
+                    ///         - Run pipe
+                    ///         - Deploy
+                    ///     - Live
+                    ///         - Setup
+                    ///         - Edit
+                    ///     - Editor
+                    ///         - Report
+                    ///         - Core
+                    ///         - Tools
+                    ///         - Session
+                    ///         - Edit
+                    ///     - Run
+                    ///     - Container
+                    ///         - Report
+                    ///         - QA
+                    ///         - Isolate
+                    ///             - Artifacts
+                    ///             - Scenarios
+                    ///         - Main
+                    ///     - App
+                    ///         - Report
+                    ///         - Mula
+                    ///         - User
+                    ///         - Servicrs
+                    ///     - Core
+                    ///         - Report
+                    ///     - BTN1
+                    ///         - Report
+                    ///         - Click
+                    ///         - Results
+                })
                 .TASK("Report", async s =>
                 {  
                    s.Log("Slices Report"); 
@@ -276,6 +319,23 @@ namespace LB.Rafts
                      "MIX - Tennis-Pong"
                     ,"[ ]       TBD"
                 )
+                .TASK("Run Slices", async s =>
+                {   
+                    /// Run Slices
+                    ///
+                    ///     Simulate the following :
+                    /// 
+                    ///     - open remote
+                    ///     - click bank
+                    ///     - add slice "PANDA"
+                    ///     - Print
+                    ///         - Create Slice
+                    /// 
+                    ///     - add slice "Dino"
+                    ///     - add slice "Pong"
+                    ///     - add slice "Tennis"
+                    ///     - add slice "Other"
+                })
                 .TASK("Report", async s =>
                 {  
                    s.Log("Slices Report"); 
@@ -311,6 +371,16 @@ namespace LB.Rafts
                     ,"[ ]       Re-Skin"
                     ,"[ ]       Re-Package"
                 )
+                .TASK("Run Products", async s =>
+                {   
+                    /// Run Products
+                    ///
+                    ///     Simulate the following :
+                    /// 
+                    ///     - Run Panda-Buzz    + Report
+                    ///     - Run Puma-Buzz     + Report
+                    ///     - Run Button-Smash  + Report
+                })
                 .TASK("Report", async s =>
                 {  
                    s.Log("Products Report"); 

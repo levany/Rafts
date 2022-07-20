@@ -23,7 +23,7 @@ namespace LB.Rafts
         //// API
         
         #if UNITY_EDITOR
-        [MenuItem("Rafts/CP")]
+        [MenuItem("Rafts/CP/Run")]
         #endif
         public static void RunActionPath()
         {   

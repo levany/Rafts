@@ -6,7 +6,7 @@ using UnityEditor.UIElements;
 
 public class RemoteEditorWindow : EditorWindow
 {
-    [MenuItem("Rafts/Remote")]
+    [MenuItem("Rafts/Platform/Remote")]
     public static void ShowExample()
     {
         RemoteEditorWindow wnd = GetWindow<RemoteEditorWindow>();
