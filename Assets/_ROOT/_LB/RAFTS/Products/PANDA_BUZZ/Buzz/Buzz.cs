@@ -52,7 +52,7 @@ public class Buzz : MonoBehaviour, IPointerDownHandler
 
     private void Awake()
     {
-        Screen.orientation = ScreenOrientation.Landscape;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     // Main flow
