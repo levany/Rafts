@@ -317,6 +317,27 @@ namespace LB.Rafts
                 });
                 
                 
+        public CStep ___Rafts => new CStep(); ////////////////////////////////////////////////////////////////////////// Rafts
+ 
+        public CStep Rafts
+            =>
+                new CStep()
+                .NOTE
+                (
+                     "Rafts"
+                    ,"[ ] 1"
+                    ,"[ ] 2"
+                    ,"[ ] 3"
+                    ,"[ ] 4"
+                    ,"[ ] 5"
+                    ,"[ ] 6"
+                )
+                .TASK("Report", async s =>
+                {  
+                   s.Log("Rafts Report"); 
+                });
+                
+                
         public CStep ___Milestones => new CStep(); ///////////////////////////////////////////////////////////////////// Milestones
  
         public CStep Milestones
@@ -361,26 +382,6 @@ namespace LB.Rafts
                    s.Log("Flagship Report"); 
                 });
                 
-                
-        public CStep ___Rafts => new CStep(); ////////////////////////////////////////////////////////////////////////// Rafts
- 
-        public CStep Rafts
-            =>
-                new CStep()
-                .NOTE
-                (
-                     "Rafts"
-                    ,"[ ] 1"
-                    ,"[ ] 2"
-                    ,"[ ] 3"
-                    ,"[ ] 4"
-                    ,"[ ] 5"
-                    ,"[ ] 6"
-                )
-                .TASK("Report", async s =>
-                {  
-                   s.Log("Rafts Report"); 
-                });
                 
         public CStep ___Critical => new CStep(); /////////////////////////////////////////////////////////////////////// Critical
  
