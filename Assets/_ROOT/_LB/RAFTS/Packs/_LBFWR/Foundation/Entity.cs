@@ -34,7 +34,7 @@ namespace  LB.RAFTS
             
             this.Link.Entity = this;
             
-            Debug.Log(this.GetType() + this.Name + "CTOR");
+            // Debug.Log(this.GetType() + this.Name + "CTOR");
         }
     }
 

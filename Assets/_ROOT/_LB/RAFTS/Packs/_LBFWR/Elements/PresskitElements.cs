@@ -5,10 +5,10 @@ using System;
 using System.IO;
 using Object = UnityEngine.Object;
 using System.Threading.Tasks;
-using UnityEditor.Recorder;
 
 #if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.Recorder;
 #endif // UNITY_EDITOR
 
 public class PresskitElements : MonoBehaviour

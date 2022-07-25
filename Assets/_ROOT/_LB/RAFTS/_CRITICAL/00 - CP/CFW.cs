@@ -16,49 +16,29 @@ namespace LB.RAFTS
     #endif
     public partial class CFW : MonoBehaviour
     {
-        //// Static
-        
-        public static CCore CoreInstance;
-        
-        //// API
-        
-        #if UNITY_EDITOR
-        [MenuItem("Rafts/CP/Run")]
-        #endif
-        public static void RunActionPath()
-        {   
-            Run();
-        }
-        
         ///////// CP
         
-        public static async void Run()
+        public static async void Run(CCore core)
         {
-            Debug.Log("=================================");
+            Debug.Log("<color=cyan>=================================</color>");
 
-            if (CoreInstance == null)
-            {
-                Debug.Log("(new CP runner instance)");
-                CoreInstance = new CP();
-            }
-
-            CoreInstance.Steps.Clear();
-            var steps = typeof(CP).GetProperties().Where(x => x.PropertyType == typeof(CStep)).ToList();
+            core.Steps.Clear();
+            var steps = core.GetType().GetProperties().Where(x => x.PropertyType == typeof(CStep)).ToList();
 
             // Populate steps
             
             foreach (var stepProp in steps)
             {
-                var step    = stepProp.GetValue(CoreInstance) as CStep;
+                var step    = stepProp.GetValue(core) as CStep;
                 step.Name   = stepProp.Name;
-                step.CCore  = CoreInstance;
+                step.CCore  = core;
                 
-                CoreInstance.Steps.Add(step);
+                core.Steps.Add(step);
             }
 
             // Run steps
 
-            foreach (var step in CoreInstance.Steps)
+            foreach (var step in core.Steps)
             {
                 await step.Run();
             }

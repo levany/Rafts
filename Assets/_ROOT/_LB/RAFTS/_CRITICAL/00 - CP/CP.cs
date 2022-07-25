@@ -13,6 +13,16 @@ namespace LB.RAFTS
     // Final Report
     public partial class CP : CCore
     {
+        
+        #if UNITY_EDITOR
+        [MenuItem("Rafts/CRITICAL/0_CP")]
+        #endif
+        public static void RunActionPath()
+        {   
+            CFW.Run(new CP());
+        }
+        
+    
         public CStep ___LBFWR => new CStep(); ////////////////////////////////////////////////////////////////////////// LBFWR
     
         public CStep LBFWR
@@ -384,88 +394,6 @@ namespace LB.RAFTS
                 .TASK("Report", async s =>
                 {  
                    s.Log("Products Report"); 
-                });
-                
-                
-        public CStep ___Rafts => new CStep(); ////////////////////////////////////////////////////////////////////////// Rafts
- 
-        public CStep Rafts
-            =>
-                new CStep()
-                .NOTE
-                (
-                     "Rafts"
-                    ,"[ ] 1"
-                    ,"[ ] 2"
-                    ,"[ ] 3"
-                    ,"[ ] 4"
-                    ,"[ ] 5"
-                    ,"[ ] 6"
-                )
-                .TASK("Report", async s =>
-                {  
-                   s.Log("Rafts Report"); 
-                });
-                
-                
-        public CStep ___Milestones => new CStep(); ///////////////////////////////////////////////////////////////////// Milestones
- 
-        public CStep Milestones
-            =>
-                new CStep()
-                .NOTE
-                (
-                     "Bus"
-                    ,"[ ]   Slice = tile"
-                    ,"[ ]   Core "
-                    ,"[ ]   BUS "
-                )
-                .NOTE
-                (
-                     "BBW"
-                    ,"[ ]   Slice"
-                    ,"[ ]   Prop = phase"
-                )
-                .TASK("Report", async s =>
-                {  
-                   s.Log("Milestones Report"); 
-                });
-                
-                
-        public CStep ___Flagship => new CStep(); /////////////////////////////////////////////////////////////////////// Flagship
- 
-        public CStep Flagship
-            =>
-                new CStep()
-                .NOTE
-                (
-                     "FB"
-                    ,"[ ] Slice"
-                    ,"[ ] Core"
-                    ,"[ ] Match"
-                    ,"[ ] Line"
-                    ,"[ ] Team"
-                    ,"[ ] Campaign"
-                )
-                .TASK("Report", async s =>
-                {  
-                   s.Log("Flagship Report"); 
-                });
-                
-                
-        public CStep ___Critical => new CStep(); /////////////////////////////////////////////////////////////////////// Critical
- 
-        public CStep Critical
-            =>
-                new CStep()
-                .NOTE
-                (
-                     "Critical report"
-                    ,"[ ]   TBD"
-                )
-                .TASK("Report", async s =>
-                {  
-                   s.Log("Critical Report"); 
                 });
     }
 }
