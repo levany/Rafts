@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace LB.Rafts
+namespace LB.RAFTS
 {
     #if Unity_EDITOR
     [ExecuteAlways]

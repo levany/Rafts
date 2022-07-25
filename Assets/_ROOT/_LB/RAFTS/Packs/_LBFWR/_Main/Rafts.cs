@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace RAFTS
+namespace LB.RAFTS
 {
     public class Rafts : MonoBehaviour
     {

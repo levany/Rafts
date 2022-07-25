@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace LB.Rafts
+namespace LB.RAFTS
 {
     // Final Report
     public partial class CP : CCore
@@ -71,8 +71,8 @@ namespace LB.Rafts
                     ,"      - Create and run following flow : "
                     ,"======================================== "
                     ,"[ ] Remote"
-                    ,"[ ]       UI"
-                    ,"[ ]       TreeView"
+                    ,"[~]       UI"
+                    ,"[~]       TreeView"
                     ,"[ ]       BE"
                     ,"[ ]       Sync"
                     ,"[ ] Product"

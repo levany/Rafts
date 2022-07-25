@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RAFTS
+namespace LB.RAFTS
 {
     public class Step 
     {
