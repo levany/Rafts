@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using LB.RAFTS;
 using UnityEngine;
 
-public class IAP : MonoBehaviour
+public class IAP : CriticalBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    // Lifecycle
+    
+    public override async Task OnInit(Step s)
+    {   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Menu Items
+
+    public Step InAppPurchase 
+    => 
+        new Step(nameof(InAppPurchase),
+                 "menu",
+                 s =>
+                 {
+                     
+                 });
+    
 }

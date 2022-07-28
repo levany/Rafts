@@ -16,7 +16,7 @@ namespace LB.RAFTS
         // Menu Item
         
         #if UNITY_EDITOR
-        [MenuItem("Rafts/CRITICAL/2_Slices/2_Pong")]
+        [MenuItem("Rafts/_CRITICAL/2_Slices/2_Pong")]
         #endif
         public static void Run()
         {   

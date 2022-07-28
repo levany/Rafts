@@ -2,19 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LB.RAFTS;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.RemoteConfig;
 using UnityEngine;
 
-public class ConfigService : MonoBehaviour
+public class ConfigService : CriticalBehaviour
 {
-    public async Task Start()
+    //// Lifecycle
+
+    public override async Task OnInit(Step s)
     {
-        // Debug.Log("ConfigService.Start");
-        // await InitializeRemoteConfigAsync();
-        // await DoThings();
+        await InitializeRemoteConfigAsync();
     }
+
+    //// Menu Items
+
+    public Step DoConfigThing 
+    => 
+        new Step(nameof(DoConfigThing),
+                 "menu",
+                 s =>
+                 {
+                    // RemoteConfigService.Instance.appConfig....
+        
+                    // RemoteConfigWebApiClient
+                 });
+    
+
+    //// Methods
     
     async Task InitializeRemoteConfigAsync()
     {
@@ -34,12 +51,4 @@ public class ConfigService : MonoBehaviour
         
         Debug.Log("ConfigService.InitializeRemoteConfigAsync done");
     }
-
-    public async Task DoThings()
-    {
-        // RemoteConfigService.Instance.appConfig....
-        
-        // RemoteConfigWebApiClient
-    }
-
 }

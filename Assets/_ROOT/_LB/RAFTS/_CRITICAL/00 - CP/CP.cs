@@ -15,7 +15,7 @@ namespace LB.RAFTS
     {
         
         #if UNITY_EDITOR
-        [MenuItem("Rafts/CRITICAL/0_CP")]
+        [MenuItem("Rafts/_CRITICAL/0_CP")]
         #endif
         public static void RunActionPath()
         {   

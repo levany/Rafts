@@ -1,34 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LB.RAFTS;
 using Unity.Services.Authentication;
 using Unity.Services.CloudCode;
 using Unity.Services.Core;
 using UnityEngine;
 
-public class CodeService : MonoBehaviour
+public class CodeService : CriticalBehaviour
 {
-    //// Lifecycle methods
-
-    public async void Start()
-    {
+    //// Lifecycle
+    
+    public override async Task OnInit(Step s)
+    {   
         await UnityServices.InitializeAsync();
         await AuthService.SignIn();
-        await DoThings();
     }
 
-    // Methods
-    
-    public async Task DoThings()
-    {
-        await Task.Delay(1000);
-        
-        Debug.Log("CodeService.DoThings()");
-    
-        var response = await CloudCodeService.Instance.CallEndpointAsync<CloudCodeResponse>("HelloWorld", default);
-        Debug.Log(response.message);
-    }
+    //// Menu Items
 
+    public Step DoCodeThing 
+    => 
+        new Step(nameof(DoCodeThing),
+                 "menu",
+                 async s =>
+                 {
+                     var response = await CloudCodeService.Instance.CallEndpointAsync<CloudCodeResponse>("HelloWorld", default);
+                     s.Log(response.message);
+                 });
+    
     //// Types
 
     private class CloudCodeResponse

@@ -4,56 +4,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CloudSaveSample;
+using LB.RAFTS;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 using Unity.Services.Core;
 using UnityEngine;
 
-public class SaveService : MonoBehaviour
+public class SaveService : CriticalBehaviour
 {
-    async void Awake()
-    {
+    //// Lifecycle
+
+    public override async Task OnInit(Step s)
+    {   
         // Cloud Save needs to be initialized along with the other Unity Services that
         // it depends on (namely, Authentication), and then the user must sign in.
         await UnityServices.InitializeAsync();
         await AuthService.SignIn();
         
-        Debug.Log("SaveService.Awake : Signed in?");
-
-        await DoThings();
-
-    }
-    
-    async Task DoThings()
-    {
-        // Get Keys
-        
-        var keys = await GetAllKeys();
-        
-        Debug.Log($"SaveService.GetAllKeys() Keys ({keys.Count}) :" 
-        + "\n" +  $"Keys: {String.Join(", ", keys)}");
-    
-        // One Value Example
-
-        //await ForceSaveSingleData("myKey", "myValue");
-        var values = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>() {"myKey"});
-        var value = values.First().Value;
-        Debug.Log($"SaveService.DoThings() Value : {value}");
-
-
-        // One Object Example 
-
-        // await ForceSaveObjectData("object_key", outgoingSample);
-        // SampleObject incomingSample = await RetrieveSpecificData<SampleObject>("object_key");
-        // Debug.Log($"Loaded sample object: {incomingSample.AmazingFloat}, {incomingSample.SparklingInt}, {incomingSample.SophisticatedString}");
-
-        // Other examples :
-
-        // await ForceDeleteSpecificData("object_key");
-        // await ListAllKeys();
-        // await RetrieveEverything();
+        s.Log("SaveService.Awake : Signed in?");
     }
 
+    // Menu Items
+
+    public Step DoSaveThing 
+    => 
+        new Step(nameof(DoSaveThing),
+                 "menu",
+                 async s =>
+                 {
+                     // Get Keys
+                    
+                    var keys = await GetAllKeys();
+                    
+                    Debug.Log($"SaveService.GetAllKeys() Keys ({keys.Count}) :" 
+                    + "\n" +  $"Keys: {String.Join(", ", keys)}");
+                
+                    // One Value Example
+
+                    //await ForceSaveSingleData("myKey", "myValue");
+                    var values = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>() {"myKey"});
+                    var value = values.First().Value;
+                    Debug.Log($"SaveService.DoThings() Value : {value}");
+
+
+                    // One Object Example 
+
+                    // await ForceSaveObjectData("object_key", outgoingSample);
+                    // SampleObject incomingSample = await RetrieveSpecificData<SampleObject>("object_key");
+                    // Debug.Log($"Loaded sample object: {incomingSample.AmazingFloat}, {incomingSample.SparklingInt}, {incomingSample.SophisticatedString}");
+
+                    // Other examples :
+
+                    // await ForceDeleteSpecificData("object_key");
+                    // await ListAllKeys();
+                    // await RetrieveEverything();
+                 });
+    
     //// API
 
     private async Task<List<string>> GetAllKeys()

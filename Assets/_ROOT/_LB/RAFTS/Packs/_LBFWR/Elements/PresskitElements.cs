@@ -22,8 +22,7 @@ public class PresskitElements : MonoBehaviour
          Directory.CreateDirectory(dir);
 
          var filename = "EditorScreenshot.png";
-         var path = dir + filename;
-         
+         var path = dir + filename;         
      }
     
      [MenuItem("Rafts/Elements/Presskit/Screenshot")]

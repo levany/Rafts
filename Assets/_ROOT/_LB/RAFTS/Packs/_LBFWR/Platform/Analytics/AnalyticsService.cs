@@ -1,17 +1,31 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using LB.RAFTS;
 using UnityEngine;
 using UnityEngine.Analytics;
 
 namespace LB
 {
-    public class AnalyticsService : MonoBehaviour
+    public class AnalyticsService : CriticalBehaviour
     {
-        public void Start()
+        //// Lifecycle
+
+        public override async Task OnInit(Step s)
         {
-            Debug.Log("AnalyticsService.Start()");
-            Unity.Services.Analytics.AnalyticsService.Instance.CustomData("MyEvent", new Dictionary<string, object>());
+            
         }
+
+        //// Menu Items
+
+        public Step DoAnalyticsThing 
+        => 
+            new Step(nameof(DoAnalyticsThing),
+                     "menu",
+                     s =>
+                     {
+                        Unity.Services.Analytics.AnalyticsService.Instance.CustomData("MyEvent", new Dictionary<string, object>());
+                     });
     }
 }

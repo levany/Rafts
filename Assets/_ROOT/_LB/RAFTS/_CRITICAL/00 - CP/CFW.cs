@@ -142,19 +142,19 @@ namespace LB.RAFTS
                         {
                             string str = message.ToString();
                             
-                            if (str.StartsWith("[V]"))
+                            if (str.Contains("[V]"))
                             {
                                 str = str.Replace("[V]","<color=green>[V]</color>");
                             }
-                            if (str.StartsWith("[X]"))
+                            if (str.Contains("[X]"))
                             {
                                 str = str.Replace("[X]","<color=red>[V]</color>");
                             }
-                            if (str.StartsWith("[~]"))
+                            if (str.Contains("[~]"))
                             {
                                 str = str.Replace("[V]","<color=yellow>[V]</color>");
                             }
-                            if (str.StartsWith("[ ]"))
+                            if (str.Contains("[ ]"))
                             {
                                 str = str.Replace("[ ]","<b>[ ]</b>");
                             }
